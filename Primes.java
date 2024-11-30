@@ -25,12 +25,16 @@ public class Primes {
             if (i == 1) {
                 i++;
             }
+            if(i == 4){
+                System.out.println(3);
+            }
             if (arrPrime[i]) {
                 System.out.println(i++);
                 count++;
             }
+            
         }
-
+        count++;
         System.out.println("There are " + count +
          " primes between 2 and " + N + " (" + (((double) count / N) * 100) + "% are primes)");
 
