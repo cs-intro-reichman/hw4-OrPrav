@@ -20,6 +20,7 @@ public class Primes {
         }   
        
         System.out.println("Prime numbers up to " + N + " :");
+        System.out.println(0);
         int count = 0;
         for(int i=0; i<arrPrime.length; i++){
             if (i == 1) {
@@ -38,5 +39,6 @@ public class Primes {
         System.out.println("There are " + count +
          " primes between 2 and " + N + " (" + (((double) count / N) * 100) + "% are primes)");
 
+        
     }
 }
