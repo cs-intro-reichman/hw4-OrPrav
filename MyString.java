@@ -1,10 +1,11 @@
 public class MyString {
     public static void main(String[] args) {
-        System.out.println("Testing lowercase:");
-        System.out.println("UnHappy : " + lowerCase("UnHappy"));
-        System.out.println("This costs 15 Sheksls : " + lowerCase("This costs 15 Sheksls"));
-        System.out.println("TLV : " + lowerCase("TLV"));
-        System.out.println("lowercase : " + lowerCase("lowercase"));
+        // System.out.println("Testing lowercase:");
+        // System.out.println("UnHappy : " + lowerCase("UnHappy"));
+        // System.out.println("This costs 15 Sheksls : " + lowerCase("This costs 15 Sheksls"));
+        // System.out.println("TLV : " + lowerCase("TLV"));
+        // System.out.println("lowercase : " + lowerCase("lowercase"));
+        
 
         System.out.println("Testing contains:");
         System.out.println(contains("unhappy", "happy")); // true
@@ -23,18 +24,33 @@ public class MyString {
             char ch1 = (char) str.charAt(i);
             if (ch1 >= 65 && ch1 <= 90) {
                 char ch2  = (char) ((char) ch1 + 32);
-                newString += newString + ch2;
+                newString = newString + ch2;
             }
             else{
                 newString = newString + (ch1);
             }
         }
+        System.out.println(newString);
         return newString;
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
-        // Replace the following statement with your code
+        if (str2.length() > str1.length()) {
+            return false;
+        }
+        for (int i = 0; i <= str1.length() - str2.length(); i++) {
+            int index;
+            for (index = 0; index < str2.length(); index++) {
+                if (str1.charAt(i + index) != str2.charAt(index)) {
+                    break;
+                }
+            }
+            if (index == str2.length()) { 
+                return true;
+            }
+        }
         return false;
     }
+
 }
