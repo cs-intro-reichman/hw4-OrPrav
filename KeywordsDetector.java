@@ -31,10 +31,11 @@ public class KeywordsDetector {
         for(int i=0; i < newSentences.length; i++){
             for(int j=0; j < keywords.length; j++){
                 if(newSentences[i].equals(keywords[j])){
-                System.out.println("I have Found: " + keywords[j] );
+                    System.out.println("I have find: " + keywords[j] );
                 }
             }   
         }
     }
+
 
 }

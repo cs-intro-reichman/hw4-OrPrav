@@ -42,7 +42,7 @@ public class MyString {
             int index;
             for (index = 0; index < str2.length(); index++) {
                 if (str1.charAt(i + index) != str2.charAt(index)) {
-                    break;
+                    break; 
                 }
             }
             if (index == str2.length()) { 
