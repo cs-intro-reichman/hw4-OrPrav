@@ -30,7 +30,6 @@ public class MyString {
                 newString = newString + (ch1);
             }
         }
-        System.out.println(newString);
         return newString;
     }
 
@@ -52,5 +51,8 @@ public class MyString {
         }
         return false;
     }
+    //Expected:%0ATesting 'lowerCase':%0APassed 3/3 tests (Passed)%0ATesting 'contains':%0APassed 5/5 tests (Passed)%0A
+    //Actual:  %0ATesting 'lowerCase':%0A%0Aeasy peasy lemon squeezy%0Ai love infi and intro%0APassed 3/3 tests (Passed)%0ATesting 'contains':%0APassed 5/5 tests (Passed)
+
 
 }
